@@ -9,16 +9,6 @@ class TaskSeeder extends Seeder
 {
     public function run(): void
     {
-        Task::create([
-            'title' => 'Setup Laravel Project',
-            'description' => 'Install Laravel and configure environment',
-            'status' => 'completed',
-        ]);
-
-        Task::create([
-            'title' => 'Build Task API',
-            'description' => 'Create the GET /tasks endpoint',
-            'status' => 'in-progress',
-        ]);
+        Task::factory()->count(50)->create();
     }
 }
